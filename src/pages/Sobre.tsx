@@ -38,9 +38,30 @@ export const Sobre = () => {
           <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
             <h3 className="text-base font-bold text-gray-800 dark:text-white">Sobre o desenvolvedor</h3>
             
-            <p>
-              Sou medico, com atuacao em obstetricia e medicina fetal, envolvido diariamente com tomada de decisao clinica, seguimento de gestantes de alto e baixo risco e uso pratico de diretrizes baseadas em evidencia.
-            </p>
+            <div className="text-center py-2">
+              <h4 className="text-lg font-bold text-gray-800 dark:text-white">Dr. Marcio do Nascimento Ribeiro</h4>
+              <p className="text-purple-600 dark:text-purple-400 font-medium">Ginecologia e Obstetricia</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">CRM 5360/PI - RQE 3262 / 4166 / 4167</p>
+            </div>
+
+            <div>
+              <h5 className="font-semibold text-gray-800 dark:text-white mb-2">Formacao</h5>
+              <ul className="space-y-1 text-gray-700 dark:text-gray-300">
+                <li>- Residencia Medica em Ginecologia e Obstetricia</li>
+                <li>- Especializacao em Medicina Fetal</li>
+                <li>- Pos-graduacao em Ecocardiografia Fetal</li>
+                <li>- Titulo de especialista em GO/Ultrassonografia em GO/Medicina Fetal</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 className="font-semibold text-gray-800 dark:text-white mb-2">Atuacao</h5>
+              <ul className="space-y-1 text-gray-700 dark:text-gray-300">
+                <li>- Medicina Fetal e Ultrassonografia Obstetrica</li>
+                <li>- Gestacao de Alto Risco</li>
+                <li>- Pre-natal de Risco Habitual</li>
+              </ul>
+            </div>
 
             <p>
               O OBHelp surgiu da necessidade real de centralizar informacoes confiaveis, reduzir o tempo de busca em multiplas fontes e oferecer suporte objetivo ao raciocinio clinico, respeitando a autonomia e a responsabilidade profissional do medico.
