@@ -4,6 +4,9 @@ const supabaseUrl = 'https://pdzvcnzlffmbeyucjiuo.supabase.co';
 declare const SUPABASE_ANON_KEY: string;
 const supabaseAnonKey = (typeof SUPABASE_ANON_KEY !== 'undefined' ? SUPABASE_ANON_KEY : '') as string;
 
+console.log('Supabase URL:', supabaseUrl);
+console.log('Supabase Key existe:', supabaseAnonKey ? 'Sim (' + supabaseAnonKey.substring(0, 20) + '...)' : 'NAO');
+
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export type UserRole = 'admin' | 'user';

@@ -115,6 +115,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signUp = async (email: string, password: string, profileData: Partial<UserProfile>) => {
+    console.log('Tentando criar conta para:', email);
     const { data, error } = await supabase.auth.signUp({ 
       email, 
       password,
@@ -125,10 +126,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
     });
     
-    if (error) return { error: error as Error };
+    if (error) {
+      console.error('Erro ao criar conta:', error);
+      return { error: error as Error };
+    }
+    
+    console.log('Conta criada com sucesso:', data);
     
     if (data.user) {
-      await createProfile(data.user.id, email, profileData);
+      const profile = await createProfile(data.user.id, email, profileData);
+      console.log('Perfil criado:', profile);
     }
     
     return { error: null };
