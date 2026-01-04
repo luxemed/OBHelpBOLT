@@ -32,57 +32,65 @@ export const PoliticaPrivacidade = () => {
           </h2>
         </div>
       ) : (
-        <BackHeader title="Política de Privacidade" />
+        <BackHeader title="Politica de Privacidade" />
       )}
       
       <main className="flex-1 px-4 pt-5 flex flex-col gap-4 max-w-lg mx-auto w-full">
-        <div className="bg-white rounded-2xl p-5 shadow-sm">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 shadow-sm">
           <div className="flex items-center gap-3 mb-4">
             <span className="material-symbols-outlined text-blue-500 text-2xl">shield</span>
-            <h2 className="text-lg font-bold text-gray-800">Política de Privacidade</h2>
+            <h2 className="text-lg font-bold text-gray-800 dark:text-white">Politica de Privacidade</h2>
           </div>
 
-          <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <p className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-4">
+            A sua privacidade e uma prioridade.
+          </p>
+
+          <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
             <section>
-              <h3 className="font-semibold text-gray-800 mb-2">Coleta de Dados</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Coleta de dados</h3>
               <p>
-                O OBHelp não coleta dados sensíveis de pacientes, como nome, CPF, prontuário ou exames identificáveis.
+                O OBHelp nao coleta dados sensiveis de pacientes, como nome, CPF, prontuario, exames identificaveis ou qualquer informacao pessoal de saude.
               </p>
             </section>
 
             <section>
-              <h3 className="font-semibold text-gray-800 mb-2">Uso das Informações</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Uso das informacoes</h3>
               <p>
-                Informações eventualmente inseridas pelo usuário são utilizadas exclusivamente para funcionamento local da aplicação.
+                As informacoes eventualmente inseridas pelo usuario sao utilizadas exclusivamente para o funcionamento local da aplicacao, sem processamento externo ou finalidade comercial.
               </p>
             </section>
 
             <section>
-              <h3 className="font-semibold text-gray-800 mb-2">Armazenamento Local</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Armazenamento local</h3>
               <p>
-                Dados como favoritos, histórico de buscas ou preferências podem ser armazenados localmente no dispositivo.
+                Dados como favoritos, historico de buscas ou preferencias podem ser armazenados localmente no dispositivo do usuario, quando aplicavel.
               </p>
             </section>
 
             <section>
-              <h3 className="font-semibold text-gray-800 mb-2">Compartilhamento</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Compartilhamento</h3>
               <p>
-                O OBHelp não compartilha informações com terceiros. Não há venda, cessão ou uso comercial de dados.
+                O OBHelp nao compartilha informacoes com terceiros.
+              </p>
+              <p>
+                Nao ha venda, cessao ou uso comercial de dados.
               </p>
             </section>
 
             <section>
-              <h3 className="font-semibold text-gray-800 mb-2">Segurança</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Seguranca</h3>
               <p>
-                Medidas razoáveis de segurança são adotadas para proteger as informações armazenadas.
+                Sao adotadas medidas tecnicas razoaveis de seguranca para proteger as informacoes armazenadas localmente, de acordo com boas praticas de desenvolvimento de software.
               </p>
             </section>
 
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mt-4">
-              <p className="text-blue-800 text-sm">
-                O uso do aplicativo implica concordância com esta Política de Privacidade.
+            <section>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Alteracoes nesta politica</h3>
+              <p>
+                Esta Politica de Privacidade pode ser atualizada periodicamente. Recomenda-se a revisao regular do conteudo.
               </p>
-            </div>
+            </section>
           </div>
         </div>
       </main>
