@@ -47,7 +47,7 @@ export const Login = () => {
   }
 
   return (
-    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-primary">
+    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-[#2F5EB5]">
       <div className="flex flex-col items-center pt-12 pb-6">
         <div className="w-28 h-28 rounded-full overflow-hidden">
           <img src="/logo-circle.png" alt="OBHelp" className="w-full h-full object-cover scale-105" />
