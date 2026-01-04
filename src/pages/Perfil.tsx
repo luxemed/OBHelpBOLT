@@ -222,19 +222,19 @@ export const Perfil = () => {
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm overflow-hidden">
           <h3 className="px-5 pt-4 pb-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Dados Pessoais</h3>
           
-          <div className="px-5 py-3 border-b border-gray-50">
-            <p className="text-xs text-purple-600 font-medium mb-0.5">Nome Completo</p>
-            <p className="text-sm text-gray-800">{profile?.nome || '-'}</p>
+          <div className="px-5 py-3 border-b border-gray-50 dark:border-gray-700">
+            <p className="text-xs text-purple-600 dark:text-purple-400 font-medium mb-0.5">Nome Completo</p>
+            <p className="text-sm text-gray-800 dark:text-gray-200">{profile?.nome || '-'}</p>
           </div>
           
-          <div className="px-5 py-3 border-b border-gray-50">
-            <p className="text-xs text-purple-600 font-medium mb-0.5">E-mail</p>
-            <p className="text-sm text-gray-800">{profile?.email || '-'}</p>
+          <div className="px-5 py-3 border-b border-gray-50 dark:border-gray-700">
+            <p className="text-xs text-purple-600 dark:text-purple-400 font-medium mb-0.5">E-mail</p>
+            <p className="text-sm text-gray-800 dark:text-gray-200">{profile?.email || '-'}</p>
           </div>
           
           <div className="px-5 py-3">
-            <p className="text-xs text-purple-600 font-medium mb-0.5">Cidade / Estado</p>
-            <p className="text-sm text-gray-800">
+            <p className="text-xs text-purple-600 dark:text-purple-400 font-medium mb-0.5">Cidade / Estado</p>
+            <p className="text-sm text-gray-800 dark:text-gray-200">
               {profile?.cidade && profile?.estado 
                 ? `${profile.cidade} - ${profile.estado}` 
                 : profile?.cidade || profile?.estado || '-'}
@@ -245,12 +245,12 @@ export const Perfil = () => {
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm overflow-hidden">
           <h3 className="px-5 pt-4 pb-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Configuracoes</h3>
           
-          <div className="flex items-center justify-between px-5 py-3.5 border-b border-gray-50">
+          <div className="flex items-center justify-between px-5 py-3.5 border-b border-gray-50 dark:border-gray-700">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-purple-100 rounded-full flex items-center justify-center">
-                <span className="material-symbols-outlined text-purple-600 text-lg">notifications</span>
+              <div className="w-9 h-9 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+                <span className="material-symbols-outlined text-purple-600 dark:text-purple-400 text-lg">notifications</span>
               </div>
-              <span className="text-sm text-gray-800">Notificacoes</span>
+              <span className="text-sm text-gray-800 dark:text-gray-200">Notificacoes</span>
             </div>
             <button 
               onClick={() => setNotificacoes(!notificacoes)}
@@ -260,10 +260,10 @@ export const Perfil = () => {
             </button>
           </div>
           
-          <div className="flex items-center justify-between px-5 py-3.5 border-b border-gray-50">
+          <div className="flex items-center justify-between px-5 py-3.5 border-b border-gray-50 dark:border-gray-700">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-purple-100 rounded-full flex items-center justify-center">
-                <span className="material-symbols-outlined text-purple-600 text-lg">dark_mode</span>
+              <div className="w-9 h-9 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+                <span className="material-symbols-outlined text-purple-600 dark:text-purple-400 text-lg">dark_mode</span>
               </div>
               <span className="text-sm text-gray-800 dark:text-gray-200">Modo Escuro</span>
             </div>
@@ -277,10 +277,10 @@ export const Perfil = () => {
           
           <div className="flex items-center justify-between px-5 py-3.5">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-purple-100 rounded-full flex items-center justify-center">
-                <span className="material-symbols-outlined text-purple-600 text-lg">wifi_off</span>
+              <div className="w-9 h-9 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+                <span className="material-symbols-outlined text-purple-600 dark:text-purple-400 text-lg">wifi_off</span>
               </div>
-              <span className="text-sm text-gray-800">Acesso Offline</span>
+              <span className="text-sm text-gray-800 dark:text-gray-200">Acesso Offline</span>
             </div>
             <button 
               onClick={() => setAcessoOffline(!acessoOffline)}
@@ -298,15 +298,15 @@ export const Perfil = () => {
             <button
               key={item.path}
               onClick={() => navigate(item.path)}
-              className={`w-full flex items-center gap-3 px-5 py-3.5 hover:bg-gray-50 transition-colors ${
-                index < menuItems.length - 1 ? 'border-b border-gray-50' : ''
+              className={`w-full flex items-center gap-3 px-5 py-3.5 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${
+                index < menuItems.length - 1 ? 'border-b border-gray-50 dark:border-gray-700' : ''
               }`}
             >
-              <div className="w-9 h-9 bg-purple-100 rounded-full flex items-center justify-center">
-                <span className="material-symbols-outlined text-purple-600 text-lg">{item.icon}</span>
+              <div className="w-9 h-9 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+                <span className="material-symbols-outlined text-purple-600 dark:text-purple-400 text-lg">{item.icon}</span>
               </div>
               <div className="flex-1 text-left">
-                <p className="text-sm text-gray-800">{item.label}</p>
+                <p className="text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
               </div>
               <span className="material-symbols-outlined text-gray-400 text-xl">chevron_right</span>
             </button>
@@ -315,7 +315,7 @@ export const Perfil = () => {
 
         <button 
           onClick={handleLogout}
-          className="w-full flex items-center justify-center gap-2 py-3 text-red-500 hover:bg-red-50 rounded-xl transition-colors"
+          className="w-full flex items-center justify-center gap-2 py-3 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-xl transition-colors"
         >
           <span className="material-symbols-outlined text-xl">logout</span>
           <span className="text-sm font-medium">Sair da conta</span>
