@@ -35,7 +35,7 @@ export const SplashScreen = () => {
         />
         <div className="flex flex-col items-center gap-2">
           <p className="text-white/80 text-sm font-medium">
-            Apoio ao raciocinio clinico em obstetricia
+            Obstetricia mais perto, decisoes mais seguras.
           </p>
         </div>
       </div>
