@@ -12,9 +12,11 @@ export const Home = () => {
     return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
   };
 
-  const getFirstName = (name: string | undefined) => {
+  const getDisplayName = (name: string | undefined) => {
     if (!name) return 'Usuário';
-    return name.trim().split(' ')[0];
+    const parts = name.trim().split(' ').filter(Boolean);
+    if (parts.length === 1) return parts[0];
+    return `${parts[0]} ${parts[parts.length - 1]}`;
   };
 
   return (
@@ -36,7 +38,7 @@ export const Home = () => {
 
       <main className="flex-1 px-4 pt-5 flex flex-col gap-6 max-w-lg mx-auto w-full">
         <div className="flex flex-col gap-0.5">
-          <h2 className="text-xl font-bold text-[#121417] dark:text-white leading-tight">Olá, Dr(a). {getFirstName(profile?.nome)}</h2>
+          <h2 className="text-xl font-bold text-[#121417] dark:text-white leading-tight">Olá, Dr(a). {getDisplayName(profile?.nome)}</h2>
           <p className="text-gray-500 dark:text-gray-400 text-sm">Painel de Decisão Clínica</p>
         </div>
 
