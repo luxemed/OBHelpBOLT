@@ -29,9 +29,10 @@ export const SplashScreen = () => {
     <div className="fixed inset-0 bg-[#3b6fb6] flex flex-col items-center justify-center">
       <div className="flex flex-col items-center gap-6 animate-fade-in">
         <img 
-          src="/logo.png" 
+          src="/logo-circle.png" 
           alt="OBHelp Logo" 
-          className="w-48 h-48 object-contain animate-pulse-slow"
+          className="w-48 h-48 object-contain animate-pulse-slow rounded-full"
+          style={{ background: 'transparent' }}
         />
         <div className="flex flex-col items-center gap-2">
           <p className="text-white/80 text-sm font-medium">
