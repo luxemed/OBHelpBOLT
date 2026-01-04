@@ -1,0 +1,5 @@
+{
+  "name": "OBHelp",
+  "description": "Assistente clínico de apoio à decisão para obstetrícia e medicina fetal. Inclui calculadoras, guias de conduta e ferramentas de interpretação de exames.",
+  "requestFramePermissions": []
+}

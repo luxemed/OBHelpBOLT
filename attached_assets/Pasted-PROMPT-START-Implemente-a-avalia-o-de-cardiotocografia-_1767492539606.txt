@@ -1,0 +1,86 @@
+PROMPT START
+
+Implemente a avaliação de cardiotocografia (CTG) por inteligência artificial no aplicativo OBHelp, utilizando a stack React + Vite + TypeScript no frontend e um backend seguro via Supabase Edge Function.
+
+OBJETIVO
+Permitir que o médico faça upload de uma imagem do traçado cardiotocográfico (JPEG ou PNG) e receba uma análise automatizada baseada nos critérios FIGO, com retorno estruturado e justificável, para apoio à decisão clínica.
+
+ARQUITETURA
+- Frontend: React + Vite + TypeScript
+- Backend: Supabase Edge Function (serverless)
+- Comunicação: HTTPS via fetch
+- Segurança: API key de IA apenas no backend
+
+FLUXO GERAL
+1. Usuário faz upload da imagem do CTG no frontend.
+2. O frontend converte a imagem para base64.
+3. O frontend envia a imagem para o endpoint serverless `/ctg-analyze`.
+4. O backend chama um modelo multimodal de IA para análise do CTG.
+5. O backend retorna um JSON clínico estruturado.
+6. O frontend exibe o resultado e permite copiar o laudo.
+
+BACKEND — EDGE FUNCTION `ctg-analyze`
+- Receber requisição POST com `imageBase64`.
+- Validar formato (JPEG/PNG) e tamanho máximo (8 MB).
+- Não armazenar a imagem.
+- Enviar a imagem ao modelo de IA com instruções clínicas claras.
+- Retornar apenas JSON válido no formato definido abaixo.
+
+CONTRATO DE ENTRADA
+POST /ctg-analyze
+{
+  "imageBase64": "string"
+}
+
+CONTRATO DE SAÍDA (OBRIGATÓRIO)
+{
+  "status": "ok",
+  "guideline": "FIGO_2015",
+  "confidence": 0.0,
+  "parameters": {
+    "baseline_bpm": 0,
+    "variability": "ausente|minima|moderada|aumentada",
+    "accelerations": true,
+    "decelerations": "nenhuma|variaveis|tardias|prolongadas|precoces",
+    "contractions_per_10min": 0
+  },
+  "classification": {
+    "figo": "normal|suspeito|patologico",
+    "rationale": ["texto clínico curto"]
+  },
+  "recommendation": {
+    "urgency": "rotina|avaliar_rapido|urgente",
+    "actions": ["ação clínica sugerida"]
+  },
+  "limitations": ["limitação da análise"]
+}
+
+PROMPT PARA O MODELO DE IA
+- Analisar exclusivamente o traçado do CTG na imagem fornecida.
+- Extrair linha de base, variabilidade, acelerações, desacelerações e atividade uterina.
+- Classificar o traçado conforme critérios FIGO.
+- Ser conservador; se a imagem não permitir avaliação segura, indicar limitação.
+- Não fornecer diagnóstico definitivo.
+- Não inventar valores ausentes.
+- Responder SOMENTE em JSON válido conforme o contrato.
+
+FRONTEND
+- Área de upload com drag-and-drop.
+- Botão “Analisar CTG”.
+- Estados de loading, erro e sucesso.
+- Exibir parâmetros, classificação FIGO, justificativa e conduta sugerida.
+- Botão “Copiar laudo”.
+
+AVISOS OBRIGATÓRIOS NA UI
+- “Ferramenta de apoio à decisão clínica.”
+- “Não substitui avaliação médica.”
+- “Não inserir dados identificáveis da paciente.”
+
+CRITÉRIOS DE ACEITE
+- API key nunca exposta no frontend.
+- Resultado sempre estruturado.
+- Upload funcional em desktop e mobile.
+- Imagem não persistida.
+- Fluxo completo funcional.
+
+PROMPT END

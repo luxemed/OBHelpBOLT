@@ -1,0 +1,58 @@
+Implemente no aplicativo OBHelp três seções institucionais acessíveis pelo menu/perfil do usuário: Sobre, Política de Privacidade e Termos de Uso.
+O conteúdo deve ser claro, formal e adequado a um aplicativo médico voltado para obstetrícia.
+
+1. Seção “Sobre”
+
+Exibir um texto institucional com as seguintes informações:
+
+O OBHelp é uma ferramenta digital de apoio à decisão clínica voltada para médicos e especialistas em obstetrícia e medicina fetal.
+
+O aplicativo reúne guias de conduta, calculadoras obstétricas, análise estruturada de cardiotocografia e informações medicamentosas baseadas em diretrizes reconhecidas.
+
+O objetivo do OBHelp é otimizar o raciocínio clínico, facilitar o acesso rápido à informação e apoiar a prática médica diária em consultório, pronto atendimento e centro obstétrico.
+
+O OBHelp não substitui o julgamento clínico, a experiência do profissional nem protocolos institucionais locais.
+
+Público-alvo: profissionais de saúde habilitados.
+
+O texto deve ser curto, direto e com linguagem médica formal.
+
+2. Seção “Política de Privacidade”
+
+Exibir o conteúdo estruturado em parágrafos curtos, cobrindo obrigatoriamente:
+
+O OBHelp não coleta dados sensíveis de pacientes, como nome, CPF, prontuário ou exames identificáveis.
+
+Informações eventualmente inseridas pelo usuário são utilizadas exclusivamente para funcionamento local da aplicação.
+
+Dados como favoritos, histórico de buscas ou preferências podem ser armazenados localmente no dispositivo.
+
+O OBHelp não compartilha informações com terceiros.
+
+Não há venda, cessão ou uso comercial de dados.
+
+Medidas razoáveis de segurança são adotadas para proteger as informações armazenadas.
+
+O uso do aplicativo implica concordância com esta Política de Privacidade.
+
+Linguagem clara, formal e compatível com boas práticas de proteção de dados.
+
+3. Seção “Termos de Uso”
+
+Exibir os seguintes pontos de forma objetiva:
+
+O OBHelp é destinado exclusivamente a profissionais de saúde.
+
+As informações disponibilizadas têm caráter educacional e de apoio à decisão clínica.
+
+O aplicativo não fornece diagnóstico médico nem substitui avaliação clínica presencial.
+
+A responsabilidade por decisões clínicas, prescrições e condutas é inteiramente do profissional usuário.
+
+O uso do OBHelp implica aceitação integral dos Termos de Uso.
+
+O conteúdo do aplicativo pode ser atualizado, modificado ou expandido sem aviso prévio.
+
+O uso indevido do aplicativo ou fora de sua finalidade médica não é de responsabilidade dos desenvolvedores.
+
+Texto formal, sem linguagem promocional.
