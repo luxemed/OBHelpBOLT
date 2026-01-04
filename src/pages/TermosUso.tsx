@@ -36,53 +36,50 @@ export const TermosUso = () => {
       )}
       
       <main className="flex-1 px-4 pt-5 flex flex-col gap-4 max-w-lg mx-auto w-full">
-        <div className="bg-white rounded-2xl p-5 shadow-sm">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 shadow-sm">
           <div className="flex items-center gap-3 mb-4">
             <span className="material-symbols-outlined text-blue-500 text-2xl">gavel</span>
-            <h2 className="text-lg font-bold text-gray-800">Termos de Uso</h2>
+            <h2 className="text-lg font-bold text-gray-800 dark:text-white">Termos de Uso</h2>
           </div>
 
-          <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
             <section>
-              <h3 className="font-semibold text-gray-800 mb-2">Destinação</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Destinacao</h3>
               <p>
-                O OBHelp é destinado exclusivamente a profissionais de saúde habilitados.
+                O OBHelp e destinado exclusivamente a profissionais de saude legalmente habilitados.
               </p>
             </section>
 
             <section>
-              <h3 className="font-semibold text-gray-800 mb-2">Natureza das Informações</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Natureza das informacoes</h3>
               <p>
-                As informações disponibilizadas têm caráter educacional e de apoio à decisão clínica. O aplicativo não fornece diagnóstico médico nem substitui avaliação clínica presencial.
+                As informacoes disponibilizadas tem carater educacional e de apoio a decisao clinica.
+              </p>
+              <p className="mt-2">
+                O aplicativo nao fornece diagnostico medico, nao prescreve tratamentos e nao substitui avaliacao clinica presencial.
               </p>
             </section>
 
             <section>
-              <h3 className="font-semibold text-gray-800 mb-2">Responsabilidade Profissional</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Responsabilidade profissional</h3>
               <p>
-                A responsabilidade por decisões clínicas, prescrições e condutas é inteiramente do profissional usuário.
+                A responsabilidade por decisoes clinicas, prescricoes, condutas e interpretacoes e inteiramente do profissional usuario.
               </p>
             </section>
 
             <section>
-              <h3 className="font-semibold text-gray-800 mb-2">Atualizações</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Atualizacoes</h3>
               <p>
-                O conteúdo do aplicativo pode ser atualizado, modificado ou expandido sem aviso prévio.
+                O conteudo do aplicativo pode ser atualizado, modificado ou expandido a qualquer momento, sem aviso previo, visando melhoria continua e alinhamento com novas evidencias cientificas.
               </p>
             </section>
 
             <section>
-              <h3 className="font-semibold text-gray-800 mb-2">Uso Indevido</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Uso indevido</h3>
               <p>
-                O uso indevido do aplicativo ou fora de sua finalidade médica não é de responsabilidade dos desenvolvedores.
+                O uso do aplicativo fora de sua finalidade medica ou em desacordo com estes termos nao e de responsabilidade dos desenvolvedores.
               </p>
             </section>
-
-            <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mt-4">
-              <p className="text-amber-800 text-sm">
-                <strong>Aceite:</strong> O uso do OBHelp implica aceitação integral dos Termos de Uso.
-              </p>
-            </div>
           </div>
         </div>
       </main>
