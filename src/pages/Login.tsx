@@ -4,7 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 
 export const Login = () => {
   const navigate = useNavigate();
-  const { signIn, signInWithGoogle, user, isApproved, loading } = useAuth();
+  const { signIn, signInWithGoogle, user, loading } = useAuth();
   
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -13,13 +13,9 @@ export const Login = () => {
 
   useEffect(() => {
     if (!loading && user) {
-      if (isApproved) {
-        navigate('/home');
-      } else {
-        navigate('/pending-approval');
-      }
+      navigate('/home');
     }
-  }, [user, isApproved, loading, navigate]);
+  }, [user, loading, navigate]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();

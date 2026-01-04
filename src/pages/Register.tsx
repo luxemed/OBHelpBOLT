@@ -97,7 +97,7 @@ export const Register = () => {
 
   useEffect(() => {
     if (!authLoading && user) {
-      navigate('/pending-approval');
+      navigate('/home');
     }
   }, [user, authLoading, navigate]);
 
