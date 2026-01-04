@@ -40,7 +40,6 @@ export const Sobre = () => {
             
             <div className="text-center py-2">
               <h4 className="text-lg font-bold text-gray-800 dark:text-white">Dr. Marcio do Nascimento Ribeiro</h4>
-              <p className="text-purple-600 dark:text-purple-400 font-medium">Ginecologia e Obstetricia</p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">CRM 5360/PI - RQE 3262 / 4166 / 4167</p>
             </div>
 
