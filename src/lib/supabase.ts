@@ -19,4 +19,5 @@ export interface UserProfile {
   role: UserRole;
   status: UserStatus;
   created_at: string;
+  avatar_url?: string;
 }
