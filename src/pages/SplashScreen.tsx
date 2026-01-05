@@ -36,7 +36,7 @@ export const SplashScreen = () => {
         />
         <div className="flex flex-col items-center gap-2">
           <p className="text-white/80 text-sm font-medium">
-            Obstetricia mais perto, decisoes mais seguras.
+            Obstetrícia mais perto, decisões mais seguras.
           </p>
         </div>
       </div>

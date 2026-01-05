@@ -97,19 +97,19 @@ export const Perfil = () => {
     {
       icon: 'info',
       label: 'Sobre',
-      description: 'Informacoes sobre o OBHelp',
+      description: 'Informações sobre o OBHelp',
       path: '/profile/sobre'
     },
     {
       icon: 'shield',
-      label: 'Politica de Privacidade',
+      label: 'Política de Privacidade',
       description: 'Como protegemos seus dados',
       path: '/profile/privacy'
     },
     {
       icon: 'gavel',
       label: 'Termos de Uso',
-      description: 'Condicoes de uso do aplicativo',
+      description: 'Condições de uso do aplicativo',
       path: '/profile/terms'
     }
   ];
@@ -194,8 +194,8 @@ export const Perfil = () => {
               <span className="material-symbols-outlined text-white text-sm">photo_camera</span>
             </button>
           </div>
-          <h2 className="text-xl font-bold text-gray-800 dark:text-white">{profile?.nome || 'Usuario'}</h2>
-          <p className="text-sm text-purple-600 dark:text-purple-400 font-medium">{profile?.especialidade || 'Profissional de Saude'}</p>
+          <h2 className="text-xl font-bold text-gray-800 dark:text-white">{profile?.nome || 'Usuário'}</h2>
+          <p className="text-sm text-purple-600 dark:text-purple-400 font-medium">{profile?.especialidade || 'Profissional de Saúde'}</p>
           {isAdmin && (
             <span className="mt-2 px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">
               Administrador
@@ -212,8 +212,8 @@ export const Perfil = () => {
               <span className="material-symbols-outlined text-white">admin_panel_settings</span>
             </div>
             <div className="flex-1 text-left">
-              <p className="font-semibold">Painel de Administracao</p>
-              <p className="text-xs text-purple-200">Gerenciar usuarios e aprovacoes</p>
+              <p className="font-semibold">Painel de Administração</p>
+              <p className="text-xs text-purple-200">Gerenciar usuários e aprovações</p>
             </div>
             <span className="material-symbols-outlined">chevron_right</span>
           </button>
@@ -243,14 +243,14 @@ export const Perfil = () => {
         </div>
 
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm overflow-hidden">
-          <h3 className="px-5 pt-4 pb-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Configuracoes</h3>
+          <h3 className="px-5 pt-4 pb-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Configurações</h3>
           
           <div className="flex items-center justify-between px-5 py-3.5 border-b border-gray-50 dark:border-gray-700">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
                 <span className="material-symbols-outlined text-purple-600 dark:text-purple-400 text-lg">notifications</span>
               </div>
-              <span className="text-sm text-gray-800 dark:text-gray-200">Notificacoes</span>
+              <span className="text-sm text-gray-800 dark:text-gray-200">Notificações</span>
             </div>
             <button 
               onClick={() => setNotificacoes(!notificacoes)}
@@ -292,7 +292,7 @@ export const Perfil = () => {
         </div>
 
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm overflow-hidden">
-          <h3 className="px-5 pt-4 pb-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Informacoes</h3>
+          <h3 className="px-5 pt-4 pb-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Informações</h3>
           
           {menuItems.map((item, index) => (
             <button

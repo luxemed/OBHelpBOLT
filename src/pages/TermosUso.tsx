@@ -44,40 +44,40 @@ export const TermosUso = () => {
 
           <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
             <section>
-              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Destinacao</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Destinação</h3>
               <p>
-                O OBHelp e destinado exclusivamente a profissionais de saude legalmente habilitados.
+                O OBHelp é destinado exclusivamente a profissionais de saúde legalmente habilitados.
               </p>
             </section>
 
             <section>
-              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Natureza das informacoes</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Natureza das informações</h3>
               <p>
-                As informacoes disponibilizadas tem carater educacional e de apoio a decisao clinica.
+                As informações disponibilizadas têm caráter educacional e de apoio à decisão clínica.
               </p>
               <p className="mt-2">
-                O aplicativo nao fornece diagnostico medico, nao prescreve tratamentos e nao substitui avaliacao clinica presencial.
+                O aplicativo não fornece diagnóstico médico, não prescreve tratamentos e não substitui avaliação clínica presencial.
               </p>
             </section>
 
             <section>
               <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Responsabilidade profissional</h3>
               <p>
-                A responsabilidade por decisoes clinicas, prescricoes, condutas e interpretacoes e inteiramente do profissional usuario.
+                A responsabilidade por decisões clínicas, prescrições, condutas e interpretações é inteiramente do profissional usuário.
               </p>
             </section>
 
             <section>
-              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Atualizacoes</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Atualizações</h3>
               <p>
-                O conteudo do aplicativo pode ser atualizado, modificado ou expandido a qualquer momento, sem aviso previo, visando melhoria continua e alinhamento com novas evidencias cientificas.
+                O conteúdo do aplicativo pode ser atualizado, modificado ou expandido a qualquer momento, sem aviso prévio, visando melhoria contínua e alinhamento com novas evidências científicas.
               </p>
             </section>
 
             <section>
               <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Uso indevido</h3>
               <p>
-                O uso do aplicativo fora de sua finalidade medica ou em desacordo com estes termos nao e de responsabilidade dos desenvolvedores.
+                O uso do aplicativo fora de sua finalidade médica ou em desacordo com estes termos não é de responsabilidade dos desenvolvedores.
               </p>
             </section>
           </div>
