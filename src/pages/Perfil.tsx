@@ -16,9 +16,9 @@ export const Perfil = () => {
   const [showPhotoMenu, setShowPhotoMenu] = useState(false);
   const [avatarUrl, setAvatarUrl] = useState(profile?.avatar_url || '');
 
-  const handleLogout = async () => {
-    await signOut();
+  const handleLogout = () => {
     navigate('/login');
+    signOut();
   };
 
   const handlePhotoClick = () => {
@@ -80,7 +80,7 @@ export const Perfil = () => {
   const openGallery = () => {
     if (fileInputRef.current) {
       fileInputRef.current.accept = 'image/*';
-      fileInputRef.current.capture = '';
+      fileInputRef.current.removeAttribute('capture');
       fileInputRef.current.click();
     }
   };
