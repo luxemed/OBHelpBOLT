@@ -111,9 +111,8 @@ export const Home = () => {
           <div className="grid grid-cols-2 gap-3">
             <button
               onClick={() => navigate('/calc/usg')}
-              className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col gap-2 items-start text-left relative"
+              className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col gap-2 items-start text-left"
             >
-              <span className="absolute top-3 right-3 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-400 text-[10px] font-semibold px-2 py-0.5 rounded-full">Gestofine</span>
               <div className="w-10 h-10 rounded-lg bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center text-purple-500">
                 <span className="material-symbols-outlined text-2xl">monitor_heart</span>
               </div>
@@ -125,9 +124,8 @@ export const Home = () => {
 
             <button
               onClick={() => navigate('/restricao-crescimento')}
-              className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col gap-2 items-start text-left relative"
+              className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col gap-2 items-start text-left"
             >
-              <span className="absolute top-3 right-3 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-400 text-[10px] font-semibold px-2 py-0.5 rounded-full">Gestofine</span>
               <div className="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-500">
                 <span className="material-symbols-outlined text-2xl">trending_down</span>
               </div>
