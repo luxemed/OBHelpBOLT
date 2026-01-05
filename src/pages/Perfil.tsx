@@ -16,9 +16,9 @@ export const Perfil = () => {
   const [showPhotoMenu, setShowPhotoMenu] = useState(false);
   const [avatarUrl, setAvatarUrl] = useState(profile?.avatar_url || '');
 
-  const handleLogout = () => {
-    navigate('/login');
-    signOut();
+  const handleLogout = async () => {
+    await signOut();
+    navigate('/login', { replace: true });
   };
 
   const handlePhotoClick = () => {
