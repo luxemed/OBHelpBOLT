@@ -64,7 +64,7 @@ export const Home = () => {
             >
               <span className="absolute top-3 right-3 bg-orange-500 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full">Urgente</span>
               <div className="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-500">
-                <span className="material-symbols-outlined text-2xl">show_chart</span>
+                <span className="material-symbols-outlined text-2xl">monitor_heart</span>
               </div>
               <div className="flex flex-col gap-0.5">
                 <h4 className="text-sm font-bold text-[#121417] dark:text-white">Cardiotocografia</h4>
@@ -113,7 +113,7 @@ export const Home = () => {
               className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col gap-2 items-start text-left"
             >
               <div className="w-10 h-10 rounded-lg bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center text-purple-500">
-                <span className="material-symbols-outlined text-2xl">monitor_heart</span>
+                <span className="material-symbols-outlined text-2xl">preview</span>
               </div>
               <div className="flex flex-col gap-0.5">
                 <h4 className="text-sm font-bold text-[#121417] dark:text-white">Ultrassonografia (USG)</h4>
@@ -126,7 +126,7 @@ export const Home = () => {
               className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col gap-2 items-start text-left"
             >
               <div className="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-500">
-                <span className="material-symbols-outlined text-2xl">trending_down</span>
+                <span className="material-symbols-outlined text-2xl">pregnancy</span>
               </div>
               <div className="flex flex-col gap-0.5">
                 <h4 className="text-sm font-bold text-[#121417] dark:text-white">Restrição de Crescimento e Doppler</h4>
@@ -152,7 +152,7 @@ export const Home = () => {
               className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col gap-2 items-start text-left"
             >
               <div className="w-10 h-10 rounded-lg bg-red-50 dark:bg-red-900/30 flex items-center justify-center text-red-500">
-                <span className="material-symbols-outlined text-2xl">warning</span>
+                <span className="material-symbols-outlined text-2xl">heart_broken</span>
               </div>
               <div className="flex flex-col gap-0.5">
                 <h4 className="text-sm font-bold text-[#121417] dark:text-white">Pré-eclâmpsia</h4>
