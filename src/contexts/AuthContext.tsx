@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
 import { User, Session } from '@supabase/supabase-js';
 import { supabase, UserProfile, UserStatus } from '../lib/supabase';
 
@@ -24,6 +24,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
+  const initialLoadDone = useRef(false);
 
   const fetchProfile = async (userId: string) => {
     const { data, error } = await supabase
@@ -77,18 +78,30 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setProfile(userProfile);
       }
       
+      initialLoadDone.current = true;
       setLoading(false);
     };
 
     initializeAuth();
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
-      if (event === 'TOKEN_REFRESHED') {
+      if (event === 'TOKEN_REFRESHED' || event === 'INITIAL_SESSION') {
         setSession(session);
+        if (session?.user && !profile) {
+          const userProfile = await fetchProfile(session.user.id);
+          setProfile(userProfile);
+        }
         return;
       }
       
-      if (event === 'SIGNED_IN' || event === 'SIGNED_OUT') {
+      if (event === 'SIGNED_OUT') {
+        setUser(null);
+        setProfile(null);
+        setSession(null);
+        return;
+      }
+      
+      if (event === 'SIGNED_IN' && !initialLoadDone.current) {
         setLoading(true);
       }
       
@@ -107,11 +120,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }
         
         setProfile(userProfile);
-      } else {
-        setProfile(null);
       }
       
-      setLoading(false);
+      if (!initialLoadDone.current) {
+        initialLoadDone.current = true;
+        setLoading(false);
+      }
     });
 
     return () => subscription.unsubscribe();
